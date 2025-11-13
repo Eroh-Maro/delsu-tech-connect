@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logoLink">
+        <div class="logo">
+          <div class="logoImageContainer">
+            <img src="images/logoImage.png" alt="" class="logoImage" />
+          </div>
+          <h3>Delsu Tech Connect</h3>
+        </div>
+      </a>
+      <ul class="navList">
+        <li><a href="/index.html" class="navLinks">Home</a></li>
+        <li><a href="/contact.html" class="navLinks">Contact</a></li>
+        <li><a href="/join.html" class="join">Join</a></li>
+      </ul>
+      <div class="menuIconContainer">
+        <img src="images/menuIcon.png" alt="" class="menuIcon" />
+      </div>
+    </nav>
+
+    <div class="menuPopUp">
+      <ul class="popUpList">
+        <li><a href="/index.html" class="popUpLinks">Home</a></li>
+        <li><a href="/contact.html" class="popUpLinks">Contact</a></li>
+        <li><a href="/join.html" class="popUpLinks">Join</a></li>
+      </ul>
+    </div>
+    <div class="overlay"></div>
+    <section class="hero">
+      <div class="heroImageContainer">
+        <img src="images/heroImage.jpg" alt="Hero Image" />
+        <div class="heroContent">
+          <h1>Your gateway to DELSU's Tech Community</h1>
+          <button class="heroCTA">
+            <a href="/join.html" class="ctaLink">Get Started</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="events">
+        <div class="eventSecLeft">
+          <div class="eventImage1">
+            <img src="/images/event.jpg" alt="" />
+          </div>
+          <div class="eventImage2">
+            <img src="/images/event2.jpg" alt="" />
+          </div>
+          <div class="eventImage1">
+            <img src="/images/event3.jpg" alt="" />
+          </div>
+        </div>
+        <div class="eventText">
+          <h2 class="eventHeader">
+            Join Our
+
+            <span class="blue"> Community </span>
+          </h2>
+          <p>
+            Become a part of DELSU Tech Connect to connect with fellow tech
+            enthusiasts, share ideas, and collaborate on exciting projects. Our
+            community is a vibrant hub for learning, innovation, and support,
+            where you can grow your skills and contribute to the tech ecosystem
+            at DELSU.
+          </p>
+        </div>
+      </div>
+      <div class="techies">
+        <div class="techieText">
+          <h2 class="techieHeader">
+            Meet Our
+
+            <span class="blue"> Techies </span>
+          </h2>
+          <p>
+            Our members are passionate about technology and innovation. From
+            developers to designers, our community is made up of diverse talents
+            who are eager to share their knowledge and collaborate on exciting
+            projects. Get to know the faces behind DELSU Tech Connect and see
+            how we're making a difference in the tech world.
+          </p>
+        </div>
+        <div class="techieImageContainer">
+          <img src="images/techies.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="upcomingEvents">
+      <h2 class="upcomingHeader"><span class="blue">Upcoming</span> Events</h2>
+      <div class="eventsContainer">
+        <div class="eventCard">
+          <img src="images/invasion.jpg" alt="" class="eventCardImage" />
+          <div class="eventCardText">
+            <h3 class="eventCardTitle">Tech Workshop 2025</h3>
+            <p class="eventCardDate">March 15, 2025</p>
+            <p class="eventCardDescription">
+              Reserve your seat by registering Support by sharing
+            </p>
+          </div>
+        </div>
+        <div class="eventCard">
+          <img src="images/invasion.jpg" alt="" class="eventCardImage" />
+          <div class="eventCardText">
+            <h3 class="eventCardTitle">Tech Workshop 2025</h3>
+            <p class="eventCardDate">March 15, 2025</p>
+            <p class="eventCardDescription">
+              Reserve your seat by registering Support by sharing
+            </p>
+          </div>
+        </div>
+        <div class="eventCard">
+          <img src="images/invasion.jpg" alt="" class="eventCardImage" />
+          <div class="eventCardText">
+            <h3 class="eventCardTitle">Tech Workshop 2025</h3>
+            <p class="eventCardDate">March 15, 2025</p>
+            <p class="eventCardDescription">
+              Reserve your seat by registering Support by sharing
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsLetter">
+      <div class="newsLetterText">
+        <h3><span class="blue">Stay</span> in the loop!</h3>
+        <h2 class="newsLetterHeader">
+          Subscribe to our newsLetter for the
+          <span class="blue">latest updates</span> and news from
+          <span class="blue">Delsu Tech Connect</span>
+        </h2>
+        <p class="newsLetterParagraph">
+          Stay updated on upcoming tech events, workshops, community projects,
+          and exclusive opportunities within the DELSU Tech Connect community.
+        </p>
+      </div>
+      <div class="subscribe-container">
+        <input
+          type="email"
+          placeholder="Enter email address"
+          class="subscribe-input"
+        />
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </section>
+    <footer>
+      <div class="footerContent">
+        <p>&copy; 2025 Delsu Tech Connect. All rights reserved.</p>
+        <ul class="footerLinks">
+          <li><a href="#" class="footerLink">Privacy Policy</a></li>
+          <li><a href="#" class="footerLink">Terms of Service</a></li>
+          <li><a href="#" class="footerLink">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      const menuIconContainer = document.querySelector(".menuIconContainer");
+      const menuPopUp = document.querySelector(".menuPopUp");
+      const overlay = document.querySelector(".overlay");
+
+      menuIconContainer.addEventListener("click", () => {
+        menuPopUp.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        menuPopUp.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logoLink">
+      <div class="logo">
+        <div class="logoImageContainer">
+          <img src="images/logoImage.png" alt="Logo" class="logoImage" />
+        </div>
+        <h3>Delsu Tech Connect</h3>
+      </div>
+    </a>
+    <ul class="navList">
+      <li><a href="/" class="navLinks">Home</a></li>
+      <li><a href="/contact.html" class="navLinks">Contact</a></li>
+      <li><a href="/join.html" class="join">Join</a></li>
+    </ul>
+    <div class="menuIconContainer">
+      <img src="images/menuIcon.png" alt="Menu" class="menuIcon" />
+    </div>
+  </nav>
+
+
+  <div class="menuPopUp">
+    <ul class="popUpList">
+      <li><a href="/" class="popUpLinks">Home</a></li>
+      <li><a href="/contact.html" class="popUpLinks">Contact</a></li>
+      <li><a href="/join.html" class="popUpLinks">Join</a></li>
+    </ul>
+  </div>
+  <div class="overlay"></div>
+
+
+  <section class="join-section">
+    <div class="join-container">
+      <h2>Join <span class="blue">Our Community</span></h2>
+      <p>
+        Become part of DELSU’s growing tech ecosystem. Fill in your details to connect,
+        learn, and collaborate with other tech enthusiasts on campus.
+      </p>
+
+      <form class="join-form">
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Select Area of Interest</option>
+            <option value="frontend">Frontend Development</option>
+            <option value="backend">Backend Development</option>
+            <option value="design">UI/UX Design</option>
+            <option value="data">Data & AI</option>
+            <option value="cyber">Cybersecurity</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Tell us why you want to join" rows="4"></textarea>
+        </div>
+        <button type="submit" class="join-btn">Join Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerContent">
+      <p>&copy; 2025 Delsu Tech Connect. All rights reserved.</p>
+      <ul class="footerLinks">
+        <li><a href="#" class="footerLink">Privacy Policy</a></li>
+        <li><a href="#" class="footerLink">Terms of Service</a></li>
+        <li><a href="/contact.html" class="footerLink">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuIconContainer = document.querySelector(".menuIconContainer");
+    const menuPopUp = document.querySelector(".menuPopUp");
+    const overlay = document.querySelector(".overlay");
+
+    menuIconContainer.addEventListener("click", () => {
+      menuPopUp.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      menuPopUp.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  </script>
+</body>
+</html>

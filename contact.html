@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logoLink">
+        <div class="logo">
+          <div class="logoImageContainer">
+            <img src="images/logoImage.png" alt="" class="logoImage" />
+          </div>
+          <h3>Delsu Tech Connect</h3>
+        </div>
+      </a>
+      <ul class="navList">
+        <li><a href="/index.html" class="navLinks">Home</a></li>
+        <li><a href="/contact.html" class="navLinks">Contact</a></li>
+        <li><a href="/join.html" class="join">Join</a></li>
+      </ul>
+      <div class="menuIconContainer">
+        <img src="images/menuIcon.png" alt="" class="menuIcon" />
+      </div>
+    </nav>
+    <div class="menuPopUp">
+      <ul class="popUpList">
+        <li><a href="/index.html" class="popUpLinks">Home</a></li>
+        <li><a href="/contact.html" class="popUpLinks">Contact</a></li>
+        <li><a href="/join.html" class="popUpLinks">Join</a></li>
+      </ul>
+    </div>
+    <div class="overlay"></div>
+    <section class="contact">
+      <div class="contactText">
+        <h2 class="contactHeader">Let's <span class="blue">chat</span></h2>
+        <p>
+          Have questions or want to get in touch? We'd love to hear from you!
+          Whether you're looking to join our tech community, have a suggestion,
+          or just want to say hello, feel free to reach out. Our team is here to
+          help and respond to your inquiries as quickly as possible.
+        </p>
+      </div>
+      <form action="submit">
+        <input type="text" placeholder="Name" class="formInputs" />
+        <input type="Email" placeholder="email" class="formInputs" />
+        <textarea
+          name="message"
+          id=""
+          cols="30"
+          rows="5"
+          placeholder="Your Message"
+          class="formInputs"
+        
+        ></textarea>
+        <button class="sendBTN">Send Message</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footerContent">
+        <p>&copy; 2025 Delsu Tech Connect. All rights reserved.</p>
+        <ul class="footerLinks">
+          <li><a href="#" class="footerLink">Privacy Policy</a></li>
+          <li><a href="#" class="footerLink">Terms of Service</a></li>
+          <li><a href="#" class="footerLink">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      const menuIconContainer = document.querySelector(".menuIconContainer");
+      const menuPopUp = document.querySelector(".menuPopUp");
+      const overlay = document.querySelector(".overlay");
+
+      menuIconContainer.addEventListener("click", () => {
+        menuPopUp.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        menuPopUp.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
