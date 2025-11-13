@@ -237,11 +237,13 @@ h1 {
   padding: 5px;
   width: 320px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+   gap: 8px;
+
 }
 
 .subscribe-input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
   padding: 10px 15px;
@@ -252,6 +254,7 @@ h1 {
 
 .subscribe-btn {
   background-color: var(--primary);
+  flex-shrink: 0;
   color: white;
   border: none;
   padding: 10px 20px;
